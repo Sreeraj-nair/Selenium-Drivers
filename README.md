@@ -36,7 +36,8 @@
 Mouse directly. 
     
     Methods - 
-    1. Actions sendKeys() - 
+    1. Actions sendKeys(String charSequence) - 
+    1. Actions sendKeys(WebElment target, String charSequence) - 
     1. Action build() - Generates a composite action containing all actions so far, ready to be performed (and resets the internal          builder state, so subsequent calls to build() will contain fresh sequences).
     2. Actions click() - 
     3. Actions click(WebElement target) - 
@@ -49,9 +50,31 @@ Mouse directly.
     10. Actions keyUp() - 
     11. Actions moveToElement() - 
     
-3. By 
+3. public class By - Mechanism used to locate elements within a document. In order to create your own locators subclass this class
+and override the proptected methods as required. 
 
-4. Select 
+    Methods 
+    1. static By id(String id) - 
+    2. static By name(String name) - 
+    3. static By className(String className) - 
+    4. satic By cssSelector(String cssSelector) - 
+    5. static By linkText(String text) -
+    6. static By partialLinkText(String text) - 
+    7. static By xpath(String xpath) - 
+    8. String toString() - 
+    
+4. Select - Models a SELECT tag, providing helper methods to select and deselect options.
+
+    Methods 
+    1. void deselectAll() - clears all selected entries. 
+    2. void deselectByIndex(int index) - deselect the option at a given index. 
+    3. void deselectByValue(String value) - Deselect all options that have a value matching the argument.
+    4. void deselectByVisibleText(java.lang.String text) - Deselect all options that display text matching the argument. 
+    5. java.util.List<WebElement> getAllSelectedOptions() - 
+    6. WebElement getFirstSelectedOption() - 
+    
+
+    
 
 5. Capabilities 
 
