@@ -13,8 +13,7 @@
 
 ### Important Interfaces and Classes of Selenium API. 
 
-1. WebDriver (Interface) - The main interface to use for testing. It represents an idealized web browser. The methods in this class 
-fall into 3 categories 
+1. public Interface WebDriver  - The main interface to use for testing. It represents an idealized web browser. The methods in this class fall into 3 categories 
 
     * Control of the browser itself
     * Selection of WebElements 
@@ -33,8 +32,23 @@ fall into 3 categories
     10. Driver.navigate().to(String url) - Abstraction to navigate forward, back. 
     11. WebDriver.TargetLocator switchTo() - Send future commands to a different frame or window. 
 
-2. Actions 
-
+2. public Class Actions - The user facing API for emulating complex gestures. Use this class rather than using the Keyboard or 
+Mouse directly. 
+    
+    Methods - 
+    1. Actions sendKeys() - 
+    1. Action build() - Generates a composite action containing all actions so far, ready to be performed (and resets the internal          builder state, so subsequent calls to build() will contain fresh sequences).
+    2. Actions click() - 
+    3. Actions click(WebElement target) - 
+    4. Actions clickAndHold() - 
+    5. Actions contextClick() - 
+    6. Actions doubleClick() - 
+    7. Actions dragAndDrop(WebElement source, WebElement target) - 
+    8. Actions dragAndDropBy(WebElement source, int xOffset, int yOffset)
+    9. Actions keyDown() - 
+    10. Actions keyUp() - 
+    11. Actions moveToElement() - 
+    
 3. By 
 
 4. Select 
