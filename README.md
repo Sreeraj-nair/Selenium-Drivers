@@ -1,7 +1,6 @@
 # Selenium-Drivers
 
-## Exception in thread "main" java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver 
-system property. 
+## Exception in thread "main" java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property
 
 ## Setting up selenium Gecko drivers. 
     
